@@ -5,6 +5,8 @@
 require('dotenv').config();
 var express = require('express');
 var app = express();
+var router = express.Router();
+var { lookup } = require("geoip-lite");
 
 // enable CORS (https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
 // so that your API is remotely testable by FCC 
@@ -32,4 +34,6 @@ var listener = app.listen(process.env.PORT, function () {
   console.log('Your app is listening on port ' + listener.address().port);
 });
 
-app.get()
+app.get("/api/whoami", (req, res) => {
+  
+})
